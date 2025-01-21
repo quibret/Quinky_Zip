@@ -1,0 +1,89 @@
+/* General Body Styling */
+body {
+    background-color: black;
+    color: white;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home Button (Positioned Vertically) */
+.home-button {
+    position: fixed;
+    top: 50%; /* Vertically center it */
+    left: 0;
+    transform: translateY(-50%) rotate(-90deg); /* Rotate by 90 degrees */
+}
+
+.home-link {
+    font-family: "Adobe Arabic", serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Center vertically */
+    padding: 50px;
+}
+
+/* Left Side (Image) */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    align-items: flex-start; /* Move image to the top */
+    margin-top: 150px; /* Push image down */
+    position: relative; /* Enable positioning the image */
+    left: 300px; /* Move the image far to the right */
+}
+
+.image img {
+    width: 80%; /* Make the image 80% of the container size */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Right Side (Header and Bio) */
+.right-side {
+    flex: 2;
+    margin-left: 400px; /* Increase left margin to move text further right */
+}
+
+.header {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 30px; /* Keep 'Me' header smaller */
+    margin-top: 0;
+}
+
+.bio {
+    font-family: "Adobe Arabic", serif;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        padding: 0;
+    }
+
+    .image img {
+        width: 80%; /* Make the image larger on smaller screens */
+    }
+
+    .right-side {
+        text-align: center;
+        margin-left: 0; /* Remove left margin for smaller screens */
+    }
+}

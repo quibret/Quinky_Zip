@@ -1,0 +1,108 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header Styles */
+header h1 {
+    font-family: "SF Pro Display", sans-serif;
+    letter-spacing: -2px;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Scrollable Section */
+section {
+    margin-top: 100vh;
+    font-family: "Adobe Arabic", serif;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Body Text Styles */
+section p {
+    letter-spacing: normal;
+}
+
+/* Container for the bottom text */
+.textContainer {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Text Hover Overlay Styles */
+.textContainer p {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    padding: 5px;
+}
+
+.textContainer p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.textContainer p:hover::before {
+    opacity: 1;
+}
+
+
+
+.about-link {
+    font-family: "Adobe Arabic", serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    
+    /* Make sure the text stays on one line */
+    white-space: nowrap;
+    
+    /* Use transform to rotate the text */
+    transform: rotate(-90deg);
+    transform-origin: left top; /* Ensures the rotation is correct */
+    
+    /* Adjust the positioning to align the rotated text */
+    position: absolute; /* Absolutely position the rotated text */
+    top: 50%;
+    left: 0; /* Align it to the left edge */
+    transform: translate(0, -50%) rotate(-90deg); /* Center it vertically and rotate */
+}
+
+/* Make it smooth on hover */
+.about-link:hover {
+    color: rgba(255, 255, 255, 0.7); /* Slightly dim the text on hover */
+}
